@@ -1,0 +1,20 @@
+﻿@model MVCwithSpine.Models.Foo.IndexViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MVC with Spine!</h2>
+A list of Foos! Click to add one!
+
+<div id="foo-wrapper">
+    <input value="add" name="add" type="button"/>
+    <input value="save" name="save" type="button"/>
+    <div id="foo-list"></div>
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery.tmpl.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/spine.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/Foo/Index.js")" type="text/javascript"></script>
+
+@Html.Partial(Model.DisplayTemplate)

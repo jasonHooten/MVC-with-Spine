@@ -1,0 +1,14 @@
+﻿
+<script id="foo-item-template"  type="text/x-jquery-tmpl">
+    <div class="foo-item" data-id="${id}">
+      <input type="text" value="${value}"/>
+      <input type="button" name="delete" value="delete" />
+    </div>
+</script>
+
+
+<script>
+  function FooCompare(x, y) {
+        return parseFloat(x.value.replace( /,/g , ''), 10) - parseFloat(y.value.replace( /,/g , ''), 10);
+    }
+</script>
